@@ -1,0 +1,54 @@
+﻿<Window x:Class="lab05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Columna Izquierda -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="Insertar Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="ID" Margin="0 10 0 0"/>
+            <TextBox x:Name="txtIdCliente" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Nombre de Compañia" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtNombreCompañia" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Nombre de Contacto" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtNombreContacto" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Cargo de Contacto" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtCargoContacto" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Direccion" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtDireccion" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Ciudad" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtCiudad" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Pais" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtPais" Width="150" Margin="0 0 0 5" />
+            <TextBlock Text="Telefono" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtTelefono" Width="150" Margin="0 0 0 5" />
+            
+            <Button Content="Grabar" Width="100" HorizontalAlignment="Left" Click="Button_Insertar"/>
+            
+        </StackPanel>
+
+        <!-- Columna Derecha -->
+        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
+            
+            <!-- Botón Listar -->
+            <Button Content="Listar" Width="100" HorizontalAlignment="Center" Margin="0 0 0 10" Click="Button_Listar"/>
+
+            <!-- DataGrid -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <DataGrid x:Name="dataClientes" Height="367" Width="385" />
+            </ScrollViewer>
+        </StackPanel>
+
+    </Grid>
+
+</Window>
